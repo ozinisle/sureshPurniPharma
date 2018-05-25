@@ -13,6 +13,7 @@ Install Node JS
 Install connect and serve-static with NPM
 
 $ npm install connect serve-static
+
 Create server.js file with this content:
 
 var connect = require('connect');
