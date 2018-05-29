@@ -1,31 +1,27 @@
-<section class="vedio-adv-horz-marquee">
+<section class="vedio-adv-horz-marquee" *ngIf="vedioHorzMarqueePageData?.videoFilesToPlay?.length>0">
   <div class="vedioSection">
-    <video width="80%" autoplay loop>
-      <source src="assets/vedios/big_buck_bunny.mp4" type="video/mp4">
-      <object data="assets/vedios/big_buck_bunny.mp4">
-        <param name="wmode" value="transparent">
-        <param name="autoplay" value="true">
-        <param name="loop" value="true">
-      </object>
-
-      Your browser does not support the video tag.
+    <video #bannerVideo autoplay loop>
+      <source [src]="vedioHorzMarqueePageData?.videoFilesToPlay[0].name" type="video/mp4"> Your browser does not support the video tag.
     </video>
   </div>
-  <div class="banner">
+  <div class="banner level-2-banner" *ngIf="vedioHorzMarqueePageData?.advsToDisplay?.level2Advs?.display">
     <p>
-      <b>1.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 2.Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 3.Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</b>
+      <b *ngFor="let advItem of vedioHorzMarqueePageData?.advsToDisplay?.level2Advs?.contents">
+        {{advItem.advTitle}}: {{advItem.advText}}</b>
     </p>
   </div>
-
+  <div class="banner level-1-banner" *ngIf="vedioHorzMarqueePageData?.advsToDisplay?.level1Advs?.display">
+    <p>
+      <b *ngFor="let advItem of vedioHorzMarqueePageData?.advsToDisplay?.level1Advs?.contents">
+        {{advItem.advTitle}}: {{advItem.advText}}</b>
+    </p>
+  </div>
+  <div class="banner" *ngIf="vedioHorzMarqueePageData?.advsToDisplay?.normalAdvs?.display">
+    <p>
+      <b *ngFor="let advItem of vedioHorzMarqueePageData?.advsToDisplay?.normalAdvs?.contents">
+        <i class="fa fa-american-sign-language-interpreting"> </i>
+        &nbsp;&nbsp;{{advItem.advTitle}}: {{advItem.advText}}&nbsp;&nbsp;
+      </b>
+    </p>
+  </div>
 </section>

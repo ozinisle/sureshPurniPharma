@@ -28,18 +28,27 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Deployment instructions (To open app in browser)
 
-1. Install node js in your machine
+1. Setup Chrome as the default browser. 
 
-2. open command prompt and navigate to the app root folder
+2. Type chrome://flags/#autoplay-policy in the address bar and select "No user gesture is required"
 
-3. Install angular cli by typing the following command in the command prompt
+    This is a chrome restriction. Please refer to the following documentation
+    https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
+
+3. Install node js in your machine
+
+4. open command prompt and navigate to the app root folder
+
+5. Install angular cli by typing the following command in the command prompt
 
 > npm i @angular/cli
 
-4. If you dont find the nodeModules folder inside the app run the following command from the command prompt
+6. If you dont find the nodeModules folder inside the app run the following command from the command prompt
 
 > npm i
 
-5.open app using the following command in command prompt
+7. open app using the following command in command prompt
 
 > ng serve --aot
+
+

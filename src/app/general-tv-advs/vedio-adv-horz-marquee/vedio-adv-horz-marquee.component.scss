@@ -1,20 +1,38 @@
 $black-color:#000000;
 $metallic-blood-red-color:#8A0707;
 $metallic-blue-color:#32527B;
+body {
+    overflow: hidden !important;
+}
+
 .vedio-adv-horz-marquee {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     background-color: $black-color;
-    text-align: center;
-    align-content: center;
-    align-items: center;
-    align-self: center;
+    height: 98vh;
+    width: 100vw;
     .vedioSection {
-        max-height: 95%;
+        position: relative;
+        flex: 10; // flex-grow: 91;
+        // -webkit-flex-grow: 91;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        align-self: center;
         width: 100%;
-        vedio {
+        video {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
             object-fit: fill;
         }
     }
     .banner {
+        flex: 1; // flex-grow: 3; // -webkit-flex-grow: 3;
         background-color: $metallic-blue-color;
         color: white;
         width: 100%;
@@ -25,6 +43,9 @@ $metallic-blue-color:#32527B;
         text-rendering: optimizeLegibility; // SVG property
         -webkit-font-smoothing: antialiased; // Font-smoothing on osx in Safari/Chrome
         -moz-osx-font-smoothing: grayscale; // Font-smoothing on osx in Firefox
+        &.level-1-banner {
+            background-color: $metallic-blood-red-color;
+        }
         p {
             display: inline-block;
             padding-left: 100%;
@@ -33,11 +54,15 @@ $metallic-blue-color:#32527B;
             text-rendering: optimizeLegibility; // SVG property
             -webkit-font-smoothing: antialiased; // Font-smoothing on osx in Safari/Chrome
             -moz-osx-font-smoothing: grayscale; // Font-smoothing on osx in Firefox
-            &:hover {
+            /*&:hover {
                 -webkit-animation-play-state: paused;
-                -moz-animation-play-state: paused;
+                -moz-animation-play-state: paused; 
                 -o-animation-play-state: paused;
                 animation-play-state: paused;
+            }*/
+            i {
+                color: gold;
+                font-size: 22px;
             }
         }
     }
