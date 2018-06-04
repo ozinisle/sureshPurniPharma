@@ -1,10 +1,12 @@
     {
         "videoFilesToPlay": [
             {
-                "name": "assets/vedios/big_buck_bunny.mp4"
+                "name": "assets/videos/big_buck_bunny.mp4",
+                "poster": "/assets/images/oceans.png"
             },
             {
-                "name": "assets/vedios/echo-hereweare.mp4"
+                "name": "assets/videos/echo-hereweare.mp4",
+                "poster": "assets/images/oceans.png"
             }
         ],
         "advsToDisplay": {
