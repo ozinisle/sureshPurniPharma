@@ -1,0 +1,92 @@
+$black-color:#000000;
+$metallic-blood-red-color:#8A0707;
+$metallic-blue-color:#32527B;
+body {
+    overflow: hidden !important;
+}
+
+.video-adv-horz-marquee {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: $black-color;
+    height: 98vh;
+    width: 100vw;
+    ::ng-deep button.vjs-big-play-button {
+        position: absolute !important;
+        top: 0px !important;
+        left: 0px !important;
+        right: 0px !important;
+        bottom: 0px !important;
+        margin: auto !important;
+    }
+    .videoSection {
+        flex: 10;
+        width: 100vw;
+        position: relative;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        align-self: center;
+        .video-js {
+            width: 100vw;
+            position: absolute;
+            text-align: center;
+            align-content: center;
+            align-items: center;
+            align-self: center;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            video {
+                height: 100%;
+                object-fit: fill;
+            }
+        }
+    }
+    .banner {
+        flex: 1; // flex-grow: 3; // -webkit-flex-grow: 3;
+        background-color: $metallic-blue-color;
+        color: white;
+        width: 100%;
+        line-height: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        box-sizing: border-box;
+        text-rendering: optimizeLegibility; // SVG property
+        -webkit-font-smoothing: antialiased; // Font-smoothing on osx in Safari/Chrome
+        -moz-osx-font-smoothing: grayscale; // Font-smoothing on osx in Firefox
+        &.level-1-banner {
+            background-color: $metallic-blood-red-color;
+        }
+        p {
+            display: inline-block;
+            padding-left: 100%;
+            animation: banner 190s linear infinite;
+            animation-delay: 2s;
+            text-rendering: optimizeLegibility; // SVG property
+            -webkit-font-smoothing: antialiased; // Font-smoothing on osx in Safari/Chrome
+            -moz-osx-font-smoothing: grayscale; // Font-smoothing on osx in Firefox
+            /*&:hover {
+                -webkit-animation-play-state: paused;
+                -moz-animation-play-state: paused; 
+                -o-animation-play-state: paused;
+                animation-play-state: paused;
+            }*/
+            i {
+                color: gold;
+                font-size: 22px;
+            }
+        }
+    }
+    @keyframes banner {
+        0% {
+            transform: translate(100, 0);
+        }
+        100% {
+            transform: translate(-100%, 0);
+        }
+    }
+}

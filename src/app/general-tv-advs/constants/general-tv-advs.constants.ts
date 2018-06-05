@@ -3,10 +3,10 @@ export const GeneralTVAdvsConstant = Object.freeze({
         generalTvAdvsModule: 'generalTvAdvsModule'
     },
     components: {
-        vedioAdvHorzMarqueeComponent: 'VedioAdvHorzMarqueeComponent'
+        videoAdvHorzMarqueeComponent: 'VideoAdvHorzMarqueeComponent'
     },
     services: {
-        vedioAdvHorzMarqueeService: 'VedioAdvHorzMarqueeService'
+        videoAdvHorzMarqueeService: 'VideoAdvHorzMarqueeService'
     },
     methods: {
         getSearchFilters: 'getSearchFilters',

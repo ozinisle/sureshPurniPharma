@@ -1,0 +1,34 @@
+<section class="video-adv-horz-marquee" *ngIf="videoHorzMarqueePageData?.videoFilesToPlay?.length>0">
+  <div class="videoSection">
+    <video id="video-adv-horz-marquee-player" class="video-js" #bannerVideo autoplay controls loop [poster]="videoHorzMarqueePageData?.videoFilesToPlay[0].poster"
+      data-setup='{}' preload="auto">
+      <source [src]="videoHorzMarqueePageData?.videoFilesToPlay[0].name" type="video/mp4">
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a web browser that
+        <a href="http://videojs.com/html5-video-support/" target="_blank">
+          supports HTML5 video
+        </a>
+      </p>
+    </video>
+  </div>
+  <div class="banner level-2-banner" *ngIf="videoHorzMarqueePageData?.advsToDisplay?.level2Advs?.display">
+    <p>
+      <b *ngFor="let advItem of videoHorzMarqueePageData?.advsToDisplay?.level2Advs?.contents">
+        {{advItem.advTitle}}: {{advItem.advText}}</b>
+    </p>
+  </div>
+  <div class="banner level-1-banner" *ngIf="videoHorzMarqueePageData?.advsToDisplay?.level1Advs?.display">
+    <p>
+      <b *ngFor="let advItem of videoHorzMarqueePageData?.advsToDisplay?.level1Advs?.contents">
+        {{advItem.advTitle}}: {{advItem.advText}}</b>
+    </p>
+  </div>
+  <div class="banner" *ngIf="videoHorzMarqueePageData?.advsToDisplay?.normalAdvs?.display">
+    <p>
+      <b *ngFor="let advItem of videoHorzMarqueePageData?.advsToDisplay?.normalAdvs?.contents">
+        <i class="fa fa-american-sign-language-interpreting"> </i>
+        &nbsp;&nbsp;{{advItem.advTitle}}: {{advItem.advText}}&nbsp;&nbsp;
+      </b>
+    </p>
+  </div>
+</section>

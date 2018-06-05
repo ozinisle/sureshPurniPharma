@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VedioAdvHorzMarqueeComponent } from './vedio-adv-horz-marquee/vedio-adv-horz-marquee.component';
+import { VideoAdvHorzMarqueeComponent } from './video-adv-horz-marquee/video-adv-horz-marquee.component';
 import { GeneralTvAdvsModuleRouter } from './general-tv-advs.router';
-import { VedioAdvHorzMarqueeService } from './vedio-adv-horz-marquee/vedio-adv-horz-marquee.service';
+import { VideoAdvHorzMarqueeService } from './video-adv-horz-marquee/video-adv-horz-marquee.service';
 import { AppErrorHandlerService } from '../shared/services/app-error-handler.service';
 import { AppHttpService } from '../shared/services/app-http.service';
 
@@ -11,11 +11,11 @@ import { AppHttpService } from '../shared/services/app-http.service';
     CommonModule,
     GeneralTvAdvsModuleRouter
   ],
-  declarations: [VedioAdvHorzMarqueeComponent],
+  declarations: [VideoAdvHorzMarqueeComponent],
   providers: [
     AppErrorHandlerService,
     AppHttpService,
-    VedioAdvHorzMarqueeService
+    VideoAdvHorzMarqueeService
   ]
 })
 export class GeneralTvAdvsModule { }

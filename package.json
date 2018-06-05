@@ -22,9 +22,12 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "angular-font-awesome": "^3.1.2",
+    "connect": "^3.6.6",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
     "rxjs": "^5.5.6",
+    "serve-static": "^1.13.2",
+    "video.js": "^7.0.3",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {

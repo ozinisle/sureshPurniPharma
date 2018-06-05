@@ -1,11 +1,11 @@
 import { Routes, RouterModule } from '@angular/router';
-import { VedioAdvHorzMarqueeComponent } from './vedio-adv-horz-marquee/vedio-adv-horz-marquee.component';
+import { VideoAdvHorzMarqueeComponent } from './video-adv-horz-marquee/video-adv-horz-marquee.component';
 
 
 const GeneralTvAdvsRoutes: Routes = [
     {
         path: '',
-        component: VedioAdvHorzMarqueeComponent
+        component: VideoAdvHorzMarqueeComponent
     }
 ];
 

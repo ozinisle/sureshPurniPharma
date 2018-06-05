@@ -1,6 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders, Component } from '@angular/core';
-import { VedioAdvHorzMarqueeComponent } from './general-tv-advs/vedio-adv-horz-marquee/vedio-adv-horz-marquee.component';
+import { VideoAdvHorzMarqueeComponent } from './general-tv-advs/video-adv-horz-marquee/video-adv-horz-marquee.component';
 
 export const router: Routes = [
     {
