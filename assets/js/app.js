@@ -24,6 +24,7 @@ function postRestApiCall(url, callback) {
 }
 
 function onPageLoad() {
+    var playerContext;
     try {
         videojs('my_video_1', {
             // plugins: {
@@ -31,9 +32,18 @@ function onPageLoad() {
             // }
         }, function () {
             // Player (this) is initialized and ready.
-            this.on("ended", function () {
-                playNext(this);
-            });
+            try {
+                playerContext = this;
+                this.on("ended", function () {
+                    try {
+                        playNext(playerContext);
+                    } catch (error) {
+                        alert("videoOnEnded>>>" + error.stack);
+                    }
+                });
+            } catch (error) {
+                alert("videoPlayerOnReady>>>" + error.stack);
+            }
         });
 
         var videoIndex = 0;
@@ -50,8 +60,6 @@ function onPageLoad() {
                     videoAssetInfo = JSON.parse(this.response);
 
                     playVideo();
-
-
 
                     window.playNext = playNext;
                     window.playPrev = playPrevious;
