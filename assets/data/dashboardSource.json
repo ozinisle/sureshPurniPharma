@@ -7,6 +7,14 @@
         {
             "name": "http://www.html5videoplayer.net/videos/toystory.mp4",
             "poster": "http://www.html5videoplayer.net/poster/toystory.jpg"
+        },
+        {
+            "name": "./assets/videos/big_buck_bunny.mp4",
+            "poster": "http://www.html5videoplayer.net/poster/toystory.jpg"
+        },
+        {
+            "name": "./assets/videos/echo-hereweare.mp4",
+            "poster": "http://www.html5videoplayer.net/poster/toystory.jpg"
         }
     ],
     "advsToDisplay": {
@@ -108,7 +116,7 @@
             ]
         },
         "level1Advs": {
-            "display": false,
+            "display": true,
             "contents": [
                 {
                     "advText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt",
@@ -137,7 +145,7 @@
             ]
         },
         "level2Advs": {
-            "display": false,
+            "display": true,
             "contents": [
                 {
                     "advText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt",
