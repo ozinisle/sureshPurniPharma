@@ -1,0 +1,169 @@
+{
+    "videoFilesToPlay": [
+        {
+            "name": "http://vjs.zencdn.net/v/oceans.mp4",
+            "poster": "http://vjs.zencdn.net/v/oceans.png"
+        },
+        {
+            "name": "http://www.html5videoplayer.net/videos/toystory.mp4",
+            "poster": "http://www.html5videoplayer.net/poster/toystory.jpg"
+        }
+    ],
+    "advsToDisplay": {
+        "normalAdvs": {
+            "display": true,
+            "contents": [
+                {
+                    "advText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt",
+                    "advTitle": "Title 1"
+                },
+                {
+                    "advText": " ut labore et dolore magna",
+                    "advTitle": "Title 2"
+                },
+                {
+                    "advText": "aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+                    "advTitle": "Title 3"
+                },
+                {
+                    "advText": "laboris nisi ut aliquip ex ea commodo consequat.",
+                    "advTitle": "Title 4"
+                },
+                {
+                    "advText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore ",
+                    "advTitle": "Title 5"
+                },
+                {
+                    "advText": "eu fugiat nulla pariatur. Excepteur",
+                    "advTitle": "Title 6"
+                },
+                {
+                    "advText": "sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ",
+                    "advTitle": "Title 7"
+                },
+                {
+                    "advText": "mollit anim id est laborum. 2.Lorem ipsum",
+                    "advTitle": "Title 8"
+                },
+                {
+                    "advText": "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ",
+                    "advTitle": "Title 9"
+                },
+                {
+                    "advText": "ut labore et dolore magna aliqua. Ut",
+                    "advTitle": "Title 10"
+                },
+                {
+                    "advText": "enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ",
+                    "advTitle": "Title 11"
+                },
+                {
+                    "advText": "aliquip ex ea commodo consequat. Duis aute",
+                    "advTitle": "Title 12"
+                },
+                {
+                    "advText": "irure dolor in reprehenderit in voluptate velit esse cillum dolore eu ",
+                    "advTitle": "Title 13"
+                },
+                {
+                    "advText": "nulla pariatur. Excepteur sint occaecat",
+                    "advTitle": "Title 14"
+                },
+                {
+                    "advText": "cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est ",
+                    "advTitle": "Title 15"
+                },
+                {
+                    "advText": "laborum. 3.Lorem ipsum dolor sit amet,",
+                    "advTitle": "Title 16"
+                },
+                {
+                    "advText": "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ",
+                    "advTitle": "Title 17"
+                },
+                {
+                    "advText": "dolore magna aliqua. Ut enim ad minim",
+                    "advTitle": "Title 18"
+                },
+                {
+                    "advText": "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ",
+                    "advTitle": "Title 19"
+                },
+                {
+                    "advText": "commodo consequat. Duis aute irure dolor",
+                    "advTitle": "Title 20"
+                },
+                {
+                    "advText": "in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla ",
+                    "advTitle": "Title 21"
+                },
+                {
+                    "advText": "pariatur. Excepteur sint occaecat cupidatat",
+                    "advTitle": "Title 22"
+                },
+                {
+                    "advText": "non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    "advTitle": "Title 23"
+                }
+            ]
+        },
+        "level1Advs": {
+            "display": false,
+            "contents": [
+                {
+                    "advText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt",
+                    "advTitle": "Title 1"
+                },
+                {
+                    "advText": " ut labore et dolore magna",
+                    "advTitle": "Title 2"
+                },
+                {
+                    "advText": "aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+                    "advTitle": "Title 3"
+                },
+                {
+                    "advText": "laboris nisi ut aliquip ex ea commodo consequat.",
+                    "advTitle": "Title 4"
+                },
+                {
+                    "advText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore ",
+                    "advTitle": "Title 5"
+                },
+                {
+                    "advText": "eu fugiat nulla pariatur. Excepteur",
+                    "advTitle": "Title 6"
+                }
+            ]
+        },
+        "level2Advs": {
+            "display": false,
+            "contents": [
+                {
+                    "advText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt",
+                    "advTitle": "Title 1"
+                },
+                {
+                    "advText": " ut labore et dolore magna",
+                    "advTitle": "Title 2"
+                },
+                {
+                    "advText": "aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+                    "advTitle": "Title 3"
+                },
+                {
+                    "advText": "laboris nisi ut aliquip ex ea commodo consequat.",
+                    "advTitle": "Title 4"
+                },
+                {
+                    "advText": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore ",
+                    "advTitle": "Title 5"
+                },
+                {
+                    "advText": "eu fugiat nulla pariatur. Excepteur",
+                    "advTitle": "Title 6"
+                }
+            ]
+        }
+    }
+}

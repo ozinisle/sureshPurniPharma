@@ -1,0 +1,80 @@
+body {
+    overflow: hidden !important;
+}
+
+.vedio-adv-horz-marquee {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #000000;
+    height: 98vh;
+    width: 100vw;
+}
+
+.vedio-adv-horz-marquee .vedioSection {
+    position: relative;
+    flex: 10;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100vw;
+}
+
+.vedio-adv-horz-marquee .vedioSection #my_video_1 {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    object-fit: fill;
+}
+
+.vedio-adv-horz-marquee .banner {
+    flex: 1;
+    background-color: #32527B;
+    color: white;
+    width: 100%;
+    line-height: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    /* SVG property*/
+    -webkit-font-smoothing: antialiased;
+    /* Font-smoothing on osx in Safari/Chrome*/
+    -moz-osx-font-smoothing: grayscale;
+    /* Font-smoothing on osx in Firefox*/
+}
+
+.vedio-adv-horz-marquee .banner p {
+    display: inline-block;
+    padding-left: 100vw;
+    animation: banner 190s linear infinite;
+    animation-delay: 2s;
+    text-rendering: optimizeLegibility;
+    /* SVG property*/
+    -webkit-font-smoothing: antialiased;
+    /* Font-smoothing on osx in Safari/Chrome*/
+    -moz-osx-font-smoothing: grayscale;
+    /* Font-smoothing on osx in Firefox*/
+}
+
+.vedio-adv-horz-marquee .banner p i {
+    color: gold;
+    font-size: 22px;
+}
+
+.vedio-adv-horz-marquee .banner.level-1-banner {
+    background-color: #8A0707;
+}
+
+@keyframes banner {
+    0% {
+        transform: translate(100, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
