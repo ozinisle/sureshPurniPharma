@@ -54,6 +54,8 @@ function onPageLoad() {
 
             xhttp = null;
 
+            var activeBanners = 0;
+
             var lvl2Banner = document.getElementsByClassName('level-2-banner');
             var lvl1Banner = document.getElementsByClassName('level-1-banner');
             var banner = document.getElementsByClassName('standard-banner');
@@ -70,6 +72,7 @@ function onPageLoad() {
                     cummulativeAdvs.push('<b>' + lvl2AdvContents[lvl2AdvItr].advTitle + ': ' + lvl2AdvContents[lvl2AdvItr].advText + '</b>');
                 }
                 paraTag.innerHTML = cummulativeAdvs.join('');
+                activeBanners++;
 
             } else {
                 lvl2Banner[0].style.display = 'none';
@@ -87,6 +90,7 @@ function onPageLoad() {
                     cummulativeAdvs.push('<b>' + lvl1AdvContents[lvl1AdvItr].advTitle + ': ' + lvl1AdvContents[lvl1AdvItr].advText + '</b>');
                 }
                 paraTag.innerHTML = cummulativeAdvs.join('');
+                activeBanners++;
             } else {
                 lvl1Banner[0].style.display = 'none';
             }
@@ -103,9 +107,12 @@ function onPageLoad() {
                     cummulativeAdvs.push('<b>' + normalAdvContents[normalAdvItr].advTitle + ': ' + normalAdvContents[normalAdvItr].advText + '</b>');
                 }
                 paraTag.innerHTML = cummulativeAdvs.join('');
+                activeBanners++;
             } else {
                 banner[0].style.display = 'none';
             }
+
+            document.getElementsByClassName('vedioSection')[0].style.height = 100 - (7 * activeBanners) + "vh";
         }
     };
     xhttp.open("GET", './assets/data/dashboardSource.json', true);
