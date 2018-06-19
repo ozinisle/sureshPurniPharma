@@ -26,9 +26,9 @@ function postRestApiCall(url, callback) {
 function onPageLoad() {
 
     videojs('my_video_1', {
-        plugins: {
-            loopbutton: true
-        }
+        // plugins: {
+        //     loopbutton: true
+        // }
     }, function () {
         // Player (this) is initialized and ready.
     });
@@ -112,7 +112,9 @@ function onPageLoad() {
                 banner[0].style.display = 'none';
             }
 
-            document.getElementsByClassName('vedioSection')[0].style.height = 100 - (7 * activeBanners) + "vh";
+            var videoContainerHeight = 100 - (7 * activeBanners) + "vh";
+            document.getElementsByClassName('vedioSection')[0].style.height = videoContainerHeight;
+            document.getElementById('my_video_1').style.height = videoContainerHeight;
         }
     };
     xhttp.open("GET", './assets/data/dashboardSource.json', true);

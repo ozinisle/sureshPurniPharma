@@ -30,6 +30,7 @@ body {
     bottom: 0;
     right: 0;
     object-fit: fill;
+    width: 100vw;
 }
 
 .vedio-adv-horz-marquee .banner {

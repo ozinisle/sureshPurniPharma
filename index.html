@@ -12,7 +12,7 @@
 <body onload="onPageLoad()">
     <div class="vedio-adv-horz-marquee" *ngIf="vedioHorzMarqueePageData?.videoFilesToPlay?.length>0">
         <div class="vedioSection">
-            <video id="my_video_1" class="video-js vjs-default-skin" controls preload="auto" data-setup='{ "playbackRates": [0.5, 1, 1.5, 2],"loopbutton": true  }'>
+            <video id="my_video_1" class="video-js vjs-default-skin" controls preload="none" data-setup='{ "playbackRates": [0.5, 1, 1.5, 2],"loopbutton": true  }'>
                 <source src="./assets/videos/welcome.mp4" type='video/mp4'>
                 <!-- <source src="" type='video/webm'> -->
             </video>
