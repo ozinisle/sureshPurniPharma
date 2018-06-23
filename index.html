@@ -10,36 +10,53 @@
 </head>
 
 <body onload="onPageLoad()">
-    <div class="vedio-adv-horz-marquee" *ngIf="vedioHorzMarqueePageData?.videoFilesToPlay?.length>0">
+<div id="customDebugger" style="display:none">
+	  Debug contents:<br>
+	</div>
+    <div class="vedio-adv-horz-marquee">
         <div class="vedioSection">
             <video id="my_video_1" class="video-js vjs-default-skin" controls preload="none" data-setup='{ "playbackRates": [0.5, 1, 1.5, 2],"loopbutton": true  }'>
                 <source src="./assets/videos/welcome.mp4" type='video/mp4'>
                 <!-- <source src="" type='video/webm'> -->
             </video>
         </div>
-        <div class="banner level-2-banner">
-            <!--*ngIf="vedioHorzMarqueePageData?.advsToDisplay?.level2Advs?.display"-->
-            <p>
-                <!-- <b *ngFor="let advItem of vedioHorzMarqueePageData?.advsToDisplay?.level2Advs?.contents">
-              {{advItem.advTitle}}: {{advItem.advText}}</b> -->
-            </p>
-        </div>
-        <div class="banner level-1-banner">
-            <!--*ngIf="vedioHorzMarqueePageData?.advsToDisplay?.level1Advs?.display"-->
-            <p>
-                <!-- <b *ngFor="let advItem of vedioHorzMarqueePageData?.advsToDisplay?.level1Advs?.contents">
-              {{advItem.advTitle}}: {{advItem.advText}}</b> -->
-            </p>
-        </div>
-        <div class="banner standard-banner">
-            <p>
-                <!-- <b *ngFor="let advItem of vedioHorzMarqueePageData?.advsToDisplay?.normalAdvs?.contents">
-              <i class="fa fa-american-sign-language-interpreting"> </i>
-              &nbsp;&nbsp;{{advItem.advTitle}}: {{advItem.advText}}&nbsp;&nbsp;
-            </b> -->
-            </p>
-        </div>
+		<div class="bannerSection" style="position:relative;width:100vw;">
+			<div class="logoContainer" style="float:left;width:15%;height:22.5vh;background-color:white;position:relative">
+			 <div style="position:absolute;top:0px;left:0px;right:0px;bottom:0px;margin:auto;height:25px;width:50px;">
+				Logo
+			 </div>
+			</div>
+			<div class="bannerContainer" style="float:left;width:70%;background-color:white;">
+				<div class="banner level-2-banner">
+					<!--*ngIf="vedioHorzMarqueePageData?.advsToDisplay?.level2Advs?.display"-->
+					<p>
+						<!-- <b *ngFor="let advItem of vedioHorzMarqueePageData?.advsToDisplay?.level2Advs?.contents">
+					  {{advItem.advTitle}}: {{advItem.advText}}</b> -->
+					</p>
+				</div>
+				<div class="banner level-1-banner">
+					<!--*ngIf="vedioHorzMarqueePageData?.advsToDisplay?.level1Advs?.display"-->
+					<p>
+						<!-- <b *ngFor="let advItem of vedioHorzMarqueePageData?.advsToDisplay?.level1Advs?.contents">
+					  {{advItem.advTitle}}: {{advItem.advText}}</b> -->
+					</p>
+				</div>
+				<div class="banner standard-banner">
+					<p>
+						<!-- <b *ngFor="let advItem of vedioHorzMarqueePageData?.advsToDisplay?.normalAdvs?.contents">
+					  <i class="fa fa-american-sign-language-interpreting"> </i>
+					  &nbsp;&nbsp;{{advItem.advTitle}}: {{advItem.advText}}&nbsp;&nbsp;
+					</b> -->
+					</p>
+				</div>
+			</div>
+			<div class="bannerAdvSection" style="float:left;width:15%;background-color:white;height:22.5vh;position:relative">
+			  <div style="position:absolute;top:0px;left:0px;right:0px;bottom:0px;margin:auto;;height:25px;width:75px;text-align:center;">promotional content</div>
+			<div>
+		</div>
+        
     </div>
+	
 </body>
 
 </html>

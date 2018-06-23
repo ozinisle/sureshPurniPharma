@@ -2,6 +2,17 @@ body {
     overflow: hidden !important;
 }
 
+#customDebugger {
+	position: absolute;
+    top: 100px;
+    left: 50px;
+    background: white;
+    z-index: 1000;
+    opacity: 1;
+    height: 200px;
+    width: 500px;overflow:scroll;	
+}
+
 .vedio-adv-horz-marquee {
     /* display: flex;
     flex-direction: column;
@@ -38,7 +49,7 @@ body {
     background-color: #32527B;
     color: white;
     width: 100%;
-    line-height: 10px;
+    /*line-height: 150px;*/
     white-space: nowrap;
     overflow: hidden;
     box-sizing: border-box;
@@ -52,7 +63,7 @@ body {
 
 .vedio-adv-horz-marquee .banner p {
     display: inline-block;
-    padding-left: 100vw;
+    padding-left: 85vw;
     animation: banner 190s linear infinite;
     animation-delay: 2s;
     text-rendering: optimizeLegibility;
@@ -70,6 +81,7 @@ body {
 
 .vedio-adv-horz-marquee .banner.level-1-banner {
     background-color: #8A0707;
+	background-image:url('/assets/images/preview-banner-maker.png')
 }
 
 @keyframes banner {

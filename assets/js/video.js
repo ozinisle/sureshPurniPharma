@@ -22232,6 +22232,7 @@ var Player = function (_Component) {
 
 
   Player.prototype.techGet_ = function techGet_(method) {
+	  //window.log('into techGet_');
     if (!this.tech_ || !this.tech_.isReady_) {
       return;
     }
@@ -22239,14 +22240,15 @@ var Player = function (_Component) {
     if (method in allowedGetters) {
       return get$1(this.middleware_, this.tech_, method);
     }
-
+//window.log('method not in allowedGetters');
     // Flash likes to die and reload when you hide or reposition it.
     // In these cases the object methods go away and we get errors.
     // When that happens we'll catch the errors and inform tech that it's not ready any more.
     try {
+		//window.log('trying tech method call>>> method='+method);
       return this.tech_[method]();
     } catch (e) {
-
+//window.log('Video.js: ' + method + ' method not defined for ' + this.techName_ + ' playback technology. >>'+ e.stack,true);
       // When building additional tech libs, an expected method may not be defined yet
       if (this.tech_[method] === undefined) {
         log$1('Video.js: ' + method + ' method not defined for ' + this.techName_ + ' playback technology.', e);
@@ -22278,10 +22280,11 @@ var Player = function (_Component) {
 
   Player.prototype.play = function play() {
     var _this5 = this;
-
+	//window.log('into play method');
     // If this is called while we have a play queued up on a loadstart, remove
     // that listener to avoid getting in a potentially bad state.
     if (this.playOnLoadstart_) {
+		//window.log('calling this.off');
       this.off('loadstart', this.playOnLoadstart_);
     }
 
@@ -22289,20 +22292,22 @@ var Player = function (_Component) {
     // when it is. This will loop back into this method for another attempt at
     // playback when the tech is ready.
     if (!this.isReady_) {
-
+//window.log('!this.isReady_');
       // Bail out if we're already waiting for `ready`!
       if (this.playWaitingForReady_) {
         return;
       }
-
+//window.log('playWaitingForReady_ is false');
       this.playWaitingForReady_ = true;
       this.ready(function () {
+		  //window.log('playing...with silence promise');
         _this5.playWaitingForReady_ = false;
         silencePromise(_this5.play());
       });
 
       // If the player/tech is ready and we have a source, we can attempt playback.
     } else if (!this.changingSrc_ && (this.src() || this.currentSrc())) {
+		//window.log('into else if block');
       return this.techGet_('play');
 
       // If the tech is ready, but we do not have a source, we'll need to wait
@@ -22312,7 +22317,7 @@ var Player = function (_Component) {
       // This can happen if `play()` is called while changing sources or before
       // one has been set on the player.
     } else {
-
+//window.log('into else block');
       this.playOnLoadstart_ = function () {
         _this5.playOnLoadstart_ = null;
         silencePromise(_this5.play());
@@ -22567,6 +22572,7 @@ var Player = function (_Component) {
 
 
   Player.prototype.volume = function volume(percentAsDecimal) {
+	  //window.log('into volume method');
     var vol = void 0;
 
     if (percentAsDecimal !== undefined) {
@@ -22578,12 +22584,13 @@ var Player = function (_Component) {
       if (vol > 0) {
         this.lastVolume_(vol);
       }
-
+//window.log('exit... conditional exit ... volume method');
       return;
     }
 
     // Default to 1 when returning current volume.
     vol = parseFloat(this.techGet_('volume'));
+	//window.log('exit... volume method>>> vol='+vol+' >>> isNaN(vol)='+isNaN(vol));
     return isNaN(vol) ? 1 : vol;
   };
 

@@ -23,27 +23,36 @@ function postRestApiCall(url, callback) {
     return desiredResponse;
 }
 
+function log(logText,errorFlag) {
+	setTimeout(function(){
+		var customDebugger=document.getElementById('customDebugger');
+		
+		if(errorFlag) logText="<span style='color:red'>"+logText+"</span>";
+		customDebugger.innerHTML=logText+"<br>"+customDebugger.innerHTML;
+	},100)
+
+}
+
 function onPageLoad() {
-    var playerContext;
+	
     try {
+			window.log=log;
         videojs('my_video_1', {
             // plugins: {
             //     loopbutton: true
             // }
         }, function () {
             // Player (this) is initialized and ready.
-            try {
-                playerContext = this;
-                this.on("ended", function () {
-                    try {
-                        playNext(playerContext);
-                    } catch (error) {
-                        alert("videoOnEnded>>>" + error.stack);
-                    }
-                });
-            } catch (error) {
-                alert("videoPlayerOnReady>>>" + error.stack);
-            }
+			
+            this.on("ended", function () {
+				window.videoPlayerContext = window.videoPlayerContext || this;
+				log('attempting to play next video...');
+				setTimeout(function(){
+					window.playNext(window.videoPlayerContext);
+					log('success .. played next video...');	
+				},100);
+				
+            });
         });
 
         var videoIndex = 0;
@@ -57,10 +66,12 @@ function onPageLoad() {
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 try {
+					//log('fetching video assets...');
                     videoAssetInfo = JSON.parse(this.response);
-
+					//log('success...');
+					//log('fetching welcome video');
                     playVideo();
-
+					//log('video tag prepared');
                     window.playNext = playNext;
                     window.playPrev = playPrevious;
 
@@ -72,6 +83,7 @@ function onPageLoad() {
                     var lvl1Banner = document.getElementsByClassName('level-1-banner');
                     var banner = document.getElementsByClassName('standard-banner');
 
+					//log('loading banners...');
                     if (videoAssetInfo.advsToDisplay &&
                         videoAssetInfo.advsToDisplay.level2Advs &&
                         videoAssetInfo.advsToDisplay.level2Advs.display) {
@@ -124,9 +136,13 @@ function onPageLoad() {
                         banner[0].style.display = 'none';
                     }
 
-                    var videoContainerHeight = 100 - (6.5 * activeBanners) + "vh";
+					//log('loading banners ... success...');
+                    var videoContainerHeight = 100 - (22.5 * activeBanners) + "vh";
                     document.getElementsByClassName('vedioSection')[0].style.height = videoContainerHeight;
                     document.getElementById('my_video_1').style.height = videoContainerHeight;
+					
+					document.getElementsByClassName('level-1-banner')[0].style.lineHeight = "22.5vh";
+					//log('defined video player dimensions...');
                 } catch (error) {
                     alert("onreadystatechange>>>readyState>>>" + error.stack);
                 }
@@ -140,36 +156,53 @@ function onPageLoad() {
 
     function playVideo() {
         try {
+			//log('Entering play video method....');
             if (videoIndex >= videoAssetInfo.videoFilesToPlay.length) {
                 videoIndex = 0;
             } else if (videoIndex < 0) {
                 videoIndex = videoAssetInfo.videoFilesToPlay.length - 1;
             }
+			//log("video index="+videoIndex);
             // for (sourceTagItr = 0; sourceTagItr < sourceTags.length; sourceTagItr++) {
             //     sourceTags[sourceTagItr].setAttribute('src', videoAssetInfo.videoFilesToPlay[videoIndex].name);
             // }
-
+			//log('tagging videoTag ...');
+			videoTag.innerHTML ="";
+			log("video file >>>"+videoAssetInfo.videoFilesToPlay[videoIndex].name);
+			
             videoTag.innerHTML = "<source src='" + videoAssetInfo.videoFilesToPlay[videoIndex].name + "' type='video/mp4'>"
             videoTag.setAttribute('poster', videoAssetInfo.videoFilesToPlay[videoIndex].poster);
             videoTag.setAttribute('src', videoAssetInfo.videoFilesToPlay[videoIndex].name);
-
+			//log('videoTag tagged ...');
+			//log('Exiting play video method');
         } catch (error) {
-            alert("playVideo>>>" + error.stack);
+            //log("playVideo>>>" + error.stack,true);
         }
     }
 
     function playNext(videoPlayer) {
-        try {
+        try {		
+            //log('play next method invoked .... incrementing video index');		
             videoIndex++;
+			//log('redefining video tag...');
             playVideo();
-            videoPlayer.play();
+			//log('success.... Now attempting to play next video');
+			//log('<span style"color:red">videoplay play>>>'+videoPlayer.play+'</span>')
+			
+			//videoPlayer.playWaitingForReady_ = false;
+            //videoPlayer.play();
+			
+			setTimeout(function(){document.getElementsByClassName('vjs-big-play-button')[0].click()},100)
+			
+			//log('success... exiting play next method');
         } catch (error) {
-            alert("playNext>>>" + error.stack);
+            //log("playNext>>>" + error.stack,true);
         }
     }
 
     function playPrevious(videoPlayer) {
         try {
+			
             videoIndex--;
             playVideo();
             videoPlayer.play();

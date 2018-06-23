@@ -1,60 +1,16 @@
 {
     "videoFilesToPlay": [
+		{
+			"name":"/assets/videos/welcome.mp4",
+			"poster":""
+		},
         {
-            "name": "http://vjs.zencdn.net/v/oceans.mp4",
-            "poster": "http://vjs.zencdn.net/v/oceans.png"
+            "name": "/assets/videos/big_buck_bunny.mp4",
+            "poster": ""
         },
-        {
-            "name": "http://www.html5videoplayer.net/videos/toystory.mp4",
-            "poster": "http://www.html5videoplayer.net/poster/toystory.jpg"
-        },
-        {
-            "name": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-            "poster": "http://www.html5videoplayer.net/poster/toystory.jpg"
-        },
-        {
-            "name": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-            "poster": "http://www.html5videoplayer.net/poster/toystory.jpg"
-        },
-        {
-            "name": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-            "poster:": "http://www.html5videoplayer.net/poster/toystory.jpg"
-        },
-        {
-            "name": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-            "poster:": "http://www.html5videoplayer.net/poster/toystory.jpg"
-        },
-        {
-            "name": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-            "poster:": "http://www.html5videoplayer.net/poster/toystory.jpg"
-        },
-        {
-            "name": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-            "poster:": "http://www.html5videoplayer.net/poster/toystory.jpg"
-        },
-        {
-            "name": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
-            "poster:": "http://www.html5videoplayer.net/poster/toystory.jpg"
-        },
-        {
-            "name": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-            "poster:": "http://www.html5videoplayer.net/poster/toystory.jpg"
-        },
-        {
-            "name": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-            "poster:": "http://www.html5videoplayer.net/poster/toystory.jpg"
-        },
-        {
-            "name": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
-            "poster:": "http://www.html5videoplayer.net/poster/toystory.jpg"
-        },
-        {
-            "name": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
-            "poster:": "http://www.html5videoplayer.net/poster/toystory.jpg"
-        },
-        {
-            "name": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
-            "poster": "http://www.html5videoplayer.net/poster/toystory.jpg"
+		{
+            "name": "/assets/videos/echo-hereweare.mp4",
+            "poster": ""
         }
     ],
     "advsToDisplay": {
@@ -63,7 +19,7 @@
             "contents": [
                 {
                     "advText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt",
-                    "advTitle": "Title 1"
+                    "advTitle": "Modified Title 1"
                 },
                 {
                     "advText": " ut labore et dolore magna",
@@ -160,7 +116,7 @@
             "contents": [
                 {
                     "advText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt",
-                    "advTitle": "Title 1"
+                    "advTitle": "Modified Title 1"
                 },
                 {
                     "advText": " ut labore et dolore magna",
@@ -189,7 +145,7 @@
             "contents": [
                 {
                     "advText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt",
-                    "advTitle": "Title 1"
+                    "advTitle": "Modified Title 1"
                 },
                 {
                     "advText": " ut labore et dolore magna",
